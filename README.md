@@ -8,7 +8,7 @@
 
 Dans cette version du "Juste prix", nous générerons un prix aléatoire, et nous calculerons le nombre de coups qu'il faut à un joueur pour retrouver le juste prix.
 
-## ------------------------------------------------------------------------------
+## ------------------------------------------------------------------------------------
 
 ### Étape 1 - Sélectionner nos éléments
 
