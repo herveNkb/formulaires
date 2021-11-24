@@ -14,6 +14,29 @@ let nombreChoisi; // Enregistre le nombre choisi par le joueur
 // Etape 6 - Créer la fonction vérifier
 function verifier(nombre) {
   let instruction = document.createElement('div');
+  if (nombre < nombreAleatoire) {
+    // c'est plus
+    instruction.textContent =
+      '#' + nbeDeCoups + ' (' + nombreChoisi + ') ' + "C'est plus !";
+    instruction.className = 'instruction plus';
+  } else if (nombre > nombreAleatoire) {
+    // c'est moins
+    instruction.textContent =
+      '#' + nbeDeCoups + ' (' + nombreChoisi + ') ' + "C'est moins !";
+    instruction.className = 'instruction moins';
+  } else {
+    // Félicitations, vous avez trouvé le juste prix !
+    instruction.textContent =
+      '#' +
+      nbeDeCoups +
+      ' (' +
+      nombreChoisi +
+      ') ' +
+      'Félicitations, vous avez trouvé le juste prix !';
+    instruction.className = 'instruction fini';
+  }
+  // Ajout de l'élément devant les autres
+  document.querySelector('#instructions').prepend(instruction);
 }
 
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
