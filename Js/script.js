@@ -34,6 +34,7 @@ function verifier(nombre) {
       ') ' +
       'Félicitations, vous avez trouvé le juste prix !';
     instruction.className = 'instruction fini';
+    input.disabled = true;
   }
   // Ajout de l'élément devant les autres
   document.querySelector('#instructions').prepend(instruction);
